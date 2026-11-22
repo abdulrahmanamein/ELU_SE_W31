@@ -1,12 +1,17 @@
+
 def CalculateTotal(cart):
     total = 0
     total_items = len(cart)
+
     for item in cart:
-        total += item['price']
+        total += float(item['price'])
+
     return total
 
+
 def display_total(Total):
-    print("Total price: " + Total)
+    print(f"Total price: ${Total:.2f}")
+
 
 CART = [
     {'name': 'Item A', 'price': 10.99},
